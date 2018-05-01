@@ -52,7 +52,7 @@ exports.find = (expression, allowedProps) => {
 				let op = RegExp.$2;
 				let value = RegExp.$3;
 				if (allowedProps && allowedProps.findIndex(item => item === prop.toUpperCase()) === -1) {
-					throw new Error(`The property \"${prop}\" is not allowed`);
+					throw new Error(`The property "${prop}" is not allowed`);
 				}
 				if (!operators[op]) {
 					throw new Error(`Invalid operator ${op}`)
